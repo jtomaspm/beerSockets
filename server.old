@@ -1,0 +1,37 @@
+//package main
+
+//import (
+//"log"
+
+//"golang.org/x/net/websocket"
+//)
+
+//type Server struct {
+//connections map[*websocket.Conn]bool
+//}
+
+//func NewServer() *Server {
+//return &Server{
+//connections: make(map[*websocket.Conn]bool),
+//}
+//}
+
+//func (self *Server) handleConnection(ws *websocket.Conn) {
+//log.Println("New connection:", ws.RemoteAddr())
+
+//self.connections[ws] = true
+//self.readLoop(ws)
+//}
+
+//func (self *Server) readLoop(ws *websocket.Conn) {
+//buffer := make([]byte, 1024)
+//for {
+//n, err := ws.Read(buffer)
+//if err != nil {
+//ws.Write([]byte("ERROR\n" + err.Error()))
+//break
+//}
+//msg := string(buffer[:n])
+//log.Println("Message: " + msg)
+//}
+//}
